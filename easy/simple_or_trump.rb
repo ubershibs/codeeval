@@ -3,7 +3,7 @@ class Card
 
   def initialize(card, trump)
     @suit = card[-1]
-    @rank = get_rank(card.chop) 
+    @rank = get_rank(card.chop)
     @trump = trump
   end
 
@@ -32,15 +32,15 @@ File.open("sample.txt").each_line do |line|
 
   if card1.rank == card2.rank
     if card1.is_trump?
-      puts c1 
+      puts c1
     elsif card2.is_trump?
-      puts c2 
+      puts c2
     else
-      puts "#{c1} #{c2}"    
+      puts "#{c1} #{c2}"
     end
   elsif card1.rank > card2.rank
     puts (card2.is_trump? && !card1.is_trump?) ?  c2 : c1
   elsif card2.rank > card1.rank
-    puts card1.is_trump? && !card2.is_trump? ? c1 : c2 
+    puts card1.is_trump? && !card2.is_trump? ? c1 : c2
   end
 end
