@@ -22,7 +22,6 @@ final_array = one_letter + two_letter + three_letter
 
 File.open("sample.txt", "r").each_line do |line|
 #File.open(ARGV[0]).each_line do |line|
-
   num = line.chomp.to_i - 1
   solution = final_array[num]
   puts solution
